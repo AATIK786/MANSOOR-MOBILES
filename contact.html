@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MANSOOR MOBILES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">📱 MANSOOR MOBILES</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="billing.html">Billing</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">Send us a Message</h3>
+
+                <!-- Form with onsubmit handler in JS -->
+                <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="What are you looking for?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-box">
+                    <h3>Address</h3>
+                    <p>32/111 Main Market Road,<br>Near City Center Mall,<br>kurnool - 518001</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Phone</h3>
+                    <p>+91 9618301786<br>+91 9618301786</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Email</h3>
+                    <p>info@mansoormobiles.com<br>support@mansoormobiles.com</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Business Hours</h3>
+                    <p>Mon - Sat: 10:00 AM - 9:00 PM<br>Sunday: 11:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MANSOOR MOBILES. All rights reserved.</p>
+        <p>Designed with love for Mobile website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

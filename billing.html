@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing | MANSOOR MOBILES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">📱 MANSOOR MOBILES</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="billing.html" class="active">Billing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <h2 class="section-title">Billing & Checkout</h2>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3 style="margin-bottom: 1.5rem; color: var(--accent-color);">Customer Details</h3>
+                <form id="billingForm" onsubmit="handleBillingSubmit(event)">
+                    <div class="form-group">
+                        <label for="custName">Full Name</label>
+                        <input type="text" id="custName" name="custName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="custPhone">Phone Number</label>
+                        <input type="tel" id="custPhone" name="custPhone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="custEmail">Email Address</label>
+                        <input type="email" id="custEmail" name="custEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="custAddress">Delivery Address</label>
+                        <textarea id="custAddress" name="custAddress" rows="3" placeholder="Enter your full address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="productSelect">Select Product</label>
+                        <select id="productSelect" name="productSelect" onchange="updateTotal()" required>
+                            <option value="" data-price="0">-- Choose a Phone --</option>
+                            <option value="Galaxy S25 5G" data-price="59900">Galaxy S25 5G - Rs.59,900</option>
+                            <option value="iPhone 15 Pro" data-price="129900">iPhone 15 Pro - Rs.1,29,900</option>
+                            <option value="Pixel 8 pro" data-price="89999">Pixel 8 pro - Rs.89,999</option>
+                            <option value="OnePlus 12R" data-price="39999">OnePlus 12R - Rs.39,999</option>
+                            <option value="Redmi 13 pro" data-price="24999">Redmi 13 pro - Rs.24,999</option>
+                            <option value="Nothing phone 2" data-price="44999">Nothing phone 2 - Rs.44,999</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5" value="1" onchange="updateTotal()" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">-- Select Payment --</option>
+                            <option value="Cash on Delivery">Cash on Delivery</option>
+                            <option value="UPI / GPay / PhonePe">UPI / GPay / PhonePe</option>
+                            <option value="Credit / Debit Card">Credit / Debit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="background: var(--secondary-color); padding: 1rem; border-radius: var(--border-radius); text-align: center;">
+                        <label style="margin-bottom: 0.3rem;">Total Amount</label>
+                        <p id="totalPrice" style="font-size: 1.8rem; color: var(--accent-color); font-weight: bold;">Rs.0</p>
+                    </div>
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-box">
+                    <h3>Order Summary</h3>
+                    <p>Review your order details before placing it.</p>
+                    <p style="margin-top: 1rem; color: var(--text-muted);">
+                        All orders include free delivery within the city. 
+                        You will receive a confirmation call within 2 hours.
+                    </p>
+                </div>
+                <div class="info-box">
+                    <h3>Payment Options</h3>
+                    <p>Cash on Delivery<br>UPI / GPay / PhonePe<br>Credit / Debit Card<br>Net Banking</p>
+                </div>
+                <div class="info-box">
+                    <h3>Delivery Info</h3>
+                    <p>Free Delivery within city limits.<br>Same-day delivery available for orders before 2 PM.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Need Help?</h3>
+                    <p>Call us: +91 9618301786<br>Email: orders@mansoormobiles.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MANSOOR MOBILES. All rights reserved.</p>
+        <p>Designed with love for Mobile website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
